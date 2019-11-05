@@ -4,3 +4,9 @@ build/*
 disk/*
 ner.egg-info/*
 dist/ner-0.1-py3.6.egg
+nerer.egg-info/dependency_links.txt
+nerer.egg-info/PKG-INFO
+nerer.egg-info/SOURCES.txt
+nerer.egg-info/top_level.txt
+dist/**
+install.txt
