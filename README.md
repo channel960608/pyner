@@ -57,5 +57,5 @@ PyNER is developed by maintained by Dat Hoang.
 It can be found here: http://github.com/dat/pyner
 
 PyNERER is updated from PyNER by Casper Chan in order to solve some issues.
-It can be found here: https://github.com/dat/pyner
+It can be found here: https://github.com/channel960608/pynerer
 
