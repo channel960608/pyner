@@ -77,8 +77,9 @@ class NER(object):
 
         :param text: string to parse entities
         :returns: a dict of entity type to list of entities of that type
-        """
-        tagged_text = self.tag_text(text)
+        """  
+        
+        tagged_text = str(self.tag_text(text), encoding = "utf-8")
         if self.oformat == 'slashTags':
             entities = self.__slashTags_parse_entities(tagged_text)
             entities = ((etype, " ".join(t[1] for t in tokens)) for (etype, tokens) in
@@ -90,7 +91,7 @@ class NER(object):
         else: #inlineXML
             entities = self.__inlineXML_parse_entities(tagged_text)
         return self.__collapse_to_dict(entities)
-
+    
     def json_entities(self, text):
         """Return a JSON encoding of named entities in text.
 

@@ -1,3 +1,10 @@
+'''
+@Author: Caspar
+@Date: 2019-11-05 16:07:54
+@LastEditors: Caspar
+@LastEditTime: 2019-11-05 16:12:52
+@Description: file content
+'''
 #!/usr/bin/env python
 
 try:
@@ -32,8 +39,8 @@ def http_connection(host, port):
     """Open an HTTP connection to designated host/port."""
     c = httplib.HTTPConnection(host, port)
     try:
-       yield c
+        yield c
     finally:
-       c.close()
+        c.close()
 
 
