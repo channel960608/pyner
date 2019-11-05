@@ -1,3 +1,10 @@
+<!--
+ * @Author: Caspar
+ * @Date: 2019-11-05 16:07:54
+ * @LastEditors: Caspar
+ * @LastEditTime: 2019-11-05 16:41:08
+ * @Description: file content
+ -->
 # PyNER 
 
 The Python interface to the [Stanford Named Entity Recognizer](https://github.com/dat/stanford-ner).
@@ -10,10 +17,15 @@ The Python interface to the [Stanford Named Entity Recognizer](https://github.co
 
     $ python setup.py install
 
-## Basic Usage
+You can record the packages you have installed by adding these paraneters 
 
+    $ python setup.py install --record install.txt
+
+## Basic Usage
+Remember that, if you are running the local server deployed on localhost, the default url of the page is _http://localhost:8080/_. then you have to add another parameter __location='/ner'__ in the function __HttpNER()__  
+    
     >>> import ner
-    >>> tagger = ner.HttpNER(host='localhost', port=8080)
+    >>> tagger = ner.HttpNER(host='localhost', port=8080, location='/ner')
     >>> tagger.get_entities("University of California is located in California, United States")
     {'LOCATION': ['California', 'United States'],
      'ORGANIZATION': ['University of California']}
